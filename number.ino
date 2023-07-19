@@ -39,6 +39,9 @@ void loop() {
    if (inp == 'r') {
       countUp();
    }
+   if (inp == 'f') {
+      figureEight();
+   }
    delay(100);
 }
 
@@ -173,4 +176,21 @@ void countUp() {
    }
    delay(500);
   }
+}
+
+void figureEight() {
+   int numInOrderOfLEDs[8] = {3,5,4,7,6,8,4,2};
+   PORTD = 0x00;
+   PORTB = 0x00;
+   for (int j = 0; j < 3; j++) {   
+      for (int i = 0; i < 8; i++) {
+         digitalWrite(numInOrderOfLEDs[i], HIGH);
+         delay(100);
+         if (i > 0) {
+            digitalWrite(numInOrderOfLEDs[i-1], LOW);
+         }
+         
+      }
+      digitalWrite(2, LOW);
+   }
 }
