@@ -14,12 +14,13 @@ void setup() {
   pinMode(6, OUTPUT);
   pinMode(7, OUTPUT);
   pinMode(8, OUTPUT);
+  Serial.println("send a 1 digit number to be displayed\nor 'r' for it to count up");
 }
 char inp;
 // the loop function runs over and over again forever
 void loop() {
 
-   Serial.println("send a 1 digit number to be displayed\nor 'r' for it to count up");
+   
 
    
    if (Serial.available()) {
@@ -38,7 +39,7 @@ void loop() {
    if (inp == 'r') {
       countUp();
    }
-   delay(5000);
+   delay(100);
 }
 
 
