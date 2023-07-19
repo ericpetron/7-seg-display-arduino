@@ -171,6 +171,6 @@ void countUp() {
         PORTD = 0xFC;
         PORTB = 0x01;
    }
-   delay(1000);
+   delay(500);
   }
 }
