@@ -42,8 +42,18 @@ void loop() {
    if (inp == 'f') {
       figureEight();
    }
+
    delay(100);
+//   blink();
 }
+
+// void blink() {
+//    PORTB = 0x01;
+//    PORTD = 0xFC;
+//    delay(1000);
+//    PORTB = 0x00;
+//    PORTD = 0x00;
+// }
 
 
 char convertToInt(char chr) {
